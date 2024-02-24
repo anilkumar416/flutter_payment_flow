@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_payment_flow/widgets/custom_card_widget.dart';
+import 'package:flutter_payment_flow/widgets/doucment_card_widget.dart';
 import 'package:flutter_payment_flow/widgets/icon_text_card.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -307,28 +308,112 @@ class _DetailsPageState extends State<DetailsPage> {
                     Row(
                       children: [
                         CustomCardWidget(
-                          title: 'MIN INVT',
-                          value: '₹ 1 Lakh',
+                          title: 'ACTIVE DEALS',
+                          value: '6 of 18',
                         ),
                         CustomCardWidget(
-                          title: 'TENURE',
-                          value: '61 days',
+                          title: 'RAISED',
+                          value: '₹ 6.94 Cr',
                         ),
                       ],
                     ),
                     Row(
                       children: [
                         CustomCardWidget(
-                          title: 'NET YIELD',
-                          value: '13.23 %',
+                          title: 'MATURED DEALS',
+                          value: '12 of 18',
                         ),
                         CustomCardWidget(
-                          title: 'RAISED',
-                          value: '70 %',
+                          title: 'ON TIME PAYMENT',
+                          value: '100 %',
                         ),
                       ],
                     )
                   ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Divider(
+                  color: Colors.grey,
+                  thickness: 1.0,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Text(
+                  "Documents",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 16,
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const DoucmentCardView(
+                  inputTitle: 'Invoice Discounting Contract',
+                  inputDetails:
+                      'All the legalese surrounding this deal and how it relates to you.',
+                  imgLink: 'assets/images/documents_one.svg',
+                ),
+                const DoucmentCardView(
+                  inputTitle: 'Invoice Discounting Contract',
+                  inputDetails:
+                      'Read more about the company and see how they pitch to investors.',
+                  imgLink: 'assets/images/documents_two.svg',
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+              ],
+            ),
+          ),
+        ),
+        bottomNavigationBar: SizedBox(
+          child: BottomAppBar(
+            color: Colors.white,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'FILLED',
+                      style: TextStyle(
+                        fontSize: 10,
+                      ),
+                    ),
+                    Text(
+                      '30%',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    // Button action
+                  },
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    backgroundColor: Colors.green.shade800,
+                    minimumSize: const Size(150, 42),
+                  ),
+                  child: const Text(
+                    'Tap to Invest',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ],
             ),

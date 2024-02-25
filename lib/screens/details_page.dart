@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_payment_flow/screens/purchasing_page.dart';
 import 'package:flutter_payment_flow/widgets/custom_card_widget.dart';
 import 'package:flutter_payment_flow/widgets/doucment_card_widget.dart';
 import 'package:flutter_payment_flow/widgets/icon_text_card.dart';
@@ -398,7 +399,11 @@ class _DetailsPageState extends State<DetailsPage> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // Button action
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const PurchasingPage()),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
